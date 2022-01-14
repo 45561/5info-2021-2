@@ -1,0 +1,20 @@
+{
+  "name": "5info-2021-2",
+  "version": "1.0.0",
+  "description": "Projeto da disciplina de DAW I - 2021/2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Projeto",
+    "Disciplina",
+    "DAWI",
+    "2021/2"
+  ],
+  "author": "Diego Porcellis",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
