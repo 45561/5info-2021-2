@@ -2,8 +2,6 @@ const express = require("express");
 const app = express();
 
 app.get("/", function (req, res) {
-  //console.log(req);
-  //let soma = parseInt(req.query.num1) + parseInt(req.query.num2);
   res.send("Resposta pelo metodo GET");
 });
 
