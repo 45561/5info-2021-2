@@ -4,14 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oi Mundo!</title>
-    <style type="text/css">
-        h1{
-            color: red;
-        }
-    </style>
+    <title>Lista de usuários cadastrados</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h1>Oi <%=nome%> </h1>
+    <h1>Listagem de Usuários</h1>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Senha</th>
+            <th>Foto</th>
+            <th>Deleta</th>
+        </tr>
+
+        <% Usuarios.forEach(function(usuario){ %>
+            <tr>
+                <td> <%=usuario._id%> </td>
+                <td> <%=usuario.nome%> </td>
+                <td> <%=usuario.email%> </td>
+                <td> <%=usuario.senha%> </td>
+                <td> <%=usuario.foto%> </td>
+                <td>
+                    <a href="/del/<%=usuario._id%>">
+                        <img class="lixeira" src="/lixeira.png">
+                    </a>
+                </td>
+            </tr>
+        <% }); %>
+
+    </table>
+
+    <% if(typeof msg !== "undefined"){ %>
+        <h1><%=msg%></h1>
+    <% } %>
+
+    <p><a href="/add">Adicionar Usuário</a></p>
 </body>
 </html>
