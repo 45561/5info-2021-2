@@ -10,6 +10,13 @@
 <body>
     <h1>Listagem de Usuários</h1>
 
+
+    <form method="post">
+        <input type="text" name="pesquisa">
+        <input type="submit" value="Pesquisar">
+    </form>
+
+
     <table>
         <tr>
             <th>ID</th>
@@ -17,6 +24,7 @@
             <th>Email</th>
             <th>Senha</th>
             <th>Foto</th>
+            <th>Editar</th>
             <th>Deleta</th>
         </tr>
 
@@ -26,7 +34,12 @@
                 <td> <%=usuario.nome%> </td>
                 <td> <%=usuario.email%> </td>
                 <td> <%=usuario.senha%> </td>
-                <td> <%=usuario.foto%> </td>
+                <td><img class="imagem" src="/usuarios/<%=usuario.foto%>"></td>
+                <td>
+                    <a href="/edt/<%=usuario._id%>">
+                        <img class="editar" src="/edit.png">
+                    </a>
+                </td>
                 <td>
                     <a href="/del/<%=usuario._id%>">
                         <img class="lixeira" src="/lixeira.png">

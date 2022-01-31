@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Edição de Usuário</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data">
+        Id: <input type="text" readonly name="id" value="<%=usuario._id%>"><br>
+        Nome: <input type="text" name="nome" value="<%=usuario.nome%>"><br>
+        Email: <input type="email" name="email" value="<%=usuario.email%>"><br>
+        Senha: <input type="password" name="senha" value="<%=usuario.senha%>"><br>
+        Foto: <input type="file" name="foto" value="<%=usuario.foto%>"><br>
+        <input type="submit">
+    </form>
+</body>
+</html>
